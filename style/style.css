@@ -6,7 +6,6 @@ img.logo {
 li.nav-item a {
     font-family: 'Signika', sans-serif;
     font-weight: 500;
-    /* font-size: 20px; */
     margin: 14px;
 }
 i.fas.fa-bars {
@@ -36,6 +35,7 @@ img.bg-design {
     position: absolute;
     top: 12rem;
     width: 100%;
+    z-index: 3;
 }
 img.backI.col-lg-4 {
     width: 36rem;
@@ -54,9 +54,6 @@ li a {
     padding: 15px 20px;
     position: relative;
   }
-  li.nav-item a:hover {
-    color: black !important;
-}
  li a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -76,6 +73,9 @@ li a {
 
 ul.navbar-nav.ml-auto {
     margin-left: auto;
+}
+.text_left.col-lg-4 {
+    z-index: 2;
 }
 h1.hi.text-white {
     font-weight: 800;
@@ -106,6 +106,9 @@ p.text-white {
     background-color: transparent;
     color: white !important;
 }
+i.fab fa-instagram:hover {
+    transform: scale(1.5);
+}
 @media only screen and (max-width: 1200px) {
     img.backI.col-lg-4 {
         width: 33rem;
@@ -124,7 +127,6 @@ p.text-white {
     img.backI.col-lg-4 {
         width: 25rem;
         margin-left: 17rem;
-        /* margin-right: -9rem; */
         margin-top: 0.2rem;
         z-index: 2;
     }
@@ -239,24 +241,73 @@ p.text-white {
         margin-top: 3.5rem;
     }
   }
-
-
-  /*CUSTOM CURSOR PONTER*/
-
-  
-  #cursor {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    mix-blend-mode: inherit;
-    pointer-events: none;
-    transition: transform .15s ease-in-out;
+  @media only screen and (max-width: 400px) {
+    .social_icon {
+        right: 9rem;
+    }
+    .landing_section {
+        width: 30rem;
+        height: 56.1rem;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .landing_section {
+        width: 20rem;
+        height: 55.1rem;
+    }
+img.backI.col-lg-4 {
+    margin-left: 8rem;
+    margin-top: 18rem;
+    width: 12rem;
+}
+h1.hi.text-white {
+    font-weight: 800;
+    font-size: 2rem;
+}
+ul.navbar-nav {
+    margin-left: 13rem;
+}
+button.navbar-toggler {
+    margin-left: 8rem;
+    margin-top: -3rem;
+}
+.text_right.col-lg-2 {
+    margin-left: 2rem;
+    margin-top: -29rem;
+}
+p.text-white {
+    width: 9rem;
+}
+.social_icon {
+    right: 0rem;
+    top: 30rem;
+}
+.buttonContainer.pt-lg-5.m-lg-6 {
+    display: grid;
 }
 
 
-  
+}
+
+  /*CUSTOM CURSOR PONTER*/
+
+
+  #cursor{
+    position: fixed;
+    width:20px ;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform .15s ease-in-out;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+
+}
+ul li:hover ~ #cursor{
+    transform: scale(6);
+}
+
   section {
     min-height: 100vh;
     display: flex;
